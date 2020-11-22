@@ -40,6 +40,8 @@ public class CSVReaderToList {
             reader.readNext();
             while ((line = reader.readNext()) != null) {
                 String[] parsingInfo=line[0].split("[\\s ]+");
+                System.out.println(line[0].toString());
+                //logger.info(line[0].toString());
                 music.setPlayId(parsingInfo[0].getBytes());
                 music.setSongId(Integer.parseInt(parsingInfo[1]));
                 music.setClientId(Integer.parseInt(parsingInfo[2]));
